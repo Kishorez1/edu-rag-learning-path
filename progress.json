@@ -9,5 +9,43 @@
         "competency": "python_basics"
       }
     ]
+  },
+  {
+    "timestamp": "2025-08-02 21:32:47",
+    "query": "Learn Python functions",
+    "learning_path": [
+      {
+        "level": "intermediate",
+        "style": "textual",
+        "competency": "python_intermediate"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-08-02 21:34:36",
+    "query": "Learn Python Data Types",
+    "learning_path": [
+      {
+        "style": "textual",
+        "competency": "python_basics",
+        "level": "beginner"
+      },
+      {
+        "level": "intermediate",
+        "style": "textual",
+        "competency": "python_intermediate"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-08-02 21:35:46",
+    "query": "Learn Python variables",
+    "learning_path": [
+      {
+        "level": "beginner",
+        "competency": "python_basics",
+        "style": "textual"
+      }
+    ]
   }
 ]
