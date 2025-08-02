@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2025-08-02 20:58:28",
+    "query": "Learn Python basics",
+    "learning_path": [
+      {
+        "style": "textual",
+        "level": "beginner",
+        "competency": "python_basics"
+      }
+    ]
+  }
+]

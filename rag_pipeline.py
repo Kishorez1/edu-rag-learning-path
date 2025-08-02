@@ -3,6 +3,8 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 from sentence_transformers import SentenceTransformer
 import chromadb
 import os
+import json
+import time
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 content_dir = "data/content/"
@@ -28,20 +30,40 @@ query = "Learn Python basics"
 query_embedding = model.encode(query)
 where_filter = {"level": "beginner"} if "basics" in query.lower() else {}
 results = collection.query(
-      query_embeddings=[query_embedding],
-      n_results=2,
-      where=where_filter
+    query_embeddings=[query_embedding],
+    n_results=2,
+    where=where_filter
   )
-  
+
 learning_path = sorted(
       zip(results['ids'][0], results['documents'][0], results['metadatas'][0]),
-      key=lambda x: x[2]['level'] != 'beginner'  
+      key=lambda x: x[2]['level'] != 'beginner'
   )
 print("Learning Path:")
 for id, doc, meta in learning_path:
       print(f"Step: {meta['competency']} ({meta['level']}): {doc[:50]}...")
 
-  
+progress_entry = {
+    "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+    "query": query,
+    "learning_path": [meta for _, _, meta in learning_path]
+  }
+progress_file = "progress.json"
+try:
+    with open(progress_file, "r") as f:
+        progress = json.load(f)
+except (FileNotFoundError, json.JSONDecodeError):
+      progress = []
+progress.append(progress_entry)
+with open(progress_file, "w") as f:
+      json.dump(progress, f, indent=2)
+
+print("\nUser Progress:")
+for entry in progress:
+      print(f"Query: {entry['query']} at {entry['timestamp']}")
+      for meta in entry['learning_path']:
+          print(f" - {meta['competency']} ({meta['level']})")
+
 print("\nRaw Retrieval Results:")
 for doc, meta, id in zip(results['documents'][0], results['metadatas'][0], results['ids'][0]):
-    print(f"ID: {id}, Content: {doc[:50]}..., Metadata: {meta}")
+      print(f"ID: {id}, Content: {doc[:50]}..., Metadata: {meta}")
