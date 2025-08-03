@@ -8,6 +8,11 @@
         "level": "beginner",
         "competency": "python_basics"
       }
+    ],
+    "keywords": [
+      "learn",
+      "basics",
+      "python"
     ]
   },
   {
@@ -19,6 +24,11 @@
         "style": "textual",
         "competency": "python_intermediate"
       }
+    ],
+    "keywords": [
+      "learn",
+      "functions",
+      "python"
     ]
   },
   {
@@ -35,6 +45,13 @@
         "style": "textual",
         "competency": "python_intermediate"
       }
+    ],
+    "keywords": [
+      "learn",
+      "types",
+      "data",
+      "variables",
+      "python"
     ]
   },
   {
@@ -46,6 +63,109 @@
         "competency": "python_basics",
         "style": "textual"
       }
+    ],
+    "keywords": [
+      "learn",
+      "variables",
+      "python"
     ]
+  },
+  {
+    "timestamp": "2025-08-03 08:09:41",
+    "query": "Learn Python variables",
+    "learning_path": [
+      {
+        "style": "textual",
+        "level": "beginner",
+        "competency": "python_basics"
+      }
+    ],
+    "keywords": [
+      "learn",
+      "variables",
+      "python"
+    ]
+  },
+  {
+    "timestamp": "2025-08-03 08:22:41",
+    "query": "Learn Python functions",
+    "keywords": [
+      "learn",
+      "python",
+      "functions"
+    ],
+    "learning_path": [
+      {
+        "style": "textual",
+        "competency": "python_intermediate",
+        "level": "intermediate"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-08-03 15:42:16",
+    "query": "Learn Python functions",
+    "keywords": [
+      "learn",
+      "functions",
+      "python"
+    ],
+    "learning_path": [
+      {
+        "level": "intermediate",
+        "style": "textual",
+        "competency": "python_intermediate"
+      }
+    ],
+    "completed": "python_intermediate"
+  },
+  {
+    "timestamp": "2025-08-03 15:56:25",
+    "query": "Learn Python functions",
+    "keywords": [
+      "learn",
+      "python",
+      "functions"
+    ],
+    "learning_path": [
+      {
+        "competency": "python_intermediate",
+        "level": "intermediate",
+        "style": "textual"
+      }
+    ],
+    "completed": "python_intermediate"
+  },
+  {
+    "timestamp": "2025-08-03 15:57:36",
+    "query": "Python loops",
+    "keywords": [
+      "loops",
+      "python"
+    ],
+    "learning_path": [
+      {
+        "competency": "python_basics",
+        "level": "beginner",
+        "style": "textual"
+      }
+    ],
+    "completed": "python_basics"
+  },
+  {
+    "timestamp": "2025-08-03 15:59:20",
+    "query": "Python Loops",
+    "keywords": [
+      "python",
+      "loops"
+    ],
+    "learning_path": [
+      {
+        "level": "beginner",
+        "competency": "python_basics",
+        "style": "textual"
+      }
+    ],
+    "completed": "python_basics"
   }
 ]
