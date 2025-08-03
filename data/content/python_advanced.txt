@@ -1,0 +1,41 @@
+Python Advanced: Decorators, Generators, and Async Programming
+
+Decorators: Decorators are functions that modify the behavior of other functions. They are used to add functionality like logging or authentication.
+Example:
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function.")
+        func()
+        print("Something is happening after the function.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+Generators: Generators are iterators that yield values one at a time, saving memory for large datasets.
+Example:
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+for num in fibonacci(5):
+    print(num)  # Outputs: 0, 1, 1, 2, 3
+
+
+Async Programming: Asynchronous programming with `async` and `await` allows concurrent execution.
+Example:
+import asyncio
+
+async def say_after(delay, message):
+    await asyncio.sleep(delay)
+    print(message)
+
+async def main():
+    await asyncio.gather(say_after(1, "Hello"), say_after(2, "World"))
+
+asyncio.run(main())
